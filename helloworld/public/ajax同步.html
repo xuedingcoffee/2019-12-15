@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+        注册的用户名:<input id="user" type="text"/>
+<script>
+    /*
+      
+    */
+    user.onblur = function(){
+        //创建
+        let xhr = new XMLHttpRequest;
+        //打开
+        xhr.open('get','/sleep?name='+this.value,false);//同步
+        //get 非post  不需要setheadrequest
+        xhr.send();
+       //等待
+        console.log(xhr.responseText);
+        console.log('执行下面的10000行代码');
+    }
+
+</script>
+</body>
+</html>

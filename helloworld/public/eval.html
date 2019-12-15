@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="txt"/>
+    <button id="btn">变</button>
+<script>
+    
+  //eval() ---尽量把能够转成js运行的代码尽量转了
+    btn.onclick = function(){
+        let val = txt.value;
+        if(/href|src|style|location/.test(val)){
+            alert('哈哈');
+        }else{
+            console.log(eval(`(${txt.value})`));
+        }
+        
+    }
+
+    // let v1= '1';
+    // let v = '+';
+    // let v2 = '2';
+    // console.log(eval(v1 + v + v2));
+
+
+    //console.log(new Function('','return '+ '{name:"黄君成"}')())
+
+
+   
+    // let json = '{"name":1}';
+
+    //  console.log(eval('('+json+')'));
+
+
+</script>
+</body>
+</html>
